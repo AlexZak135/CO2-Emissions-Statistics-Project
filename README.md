@@ -3,7 +3,7 @@
 ## Background
 Over the past three decades, climate change has emerged as a pressing global concern, with CO2 emissions from vehicles playing a substantial role in exacerbating this issue. Experts predict that this year, CO2 emissions from vehicles will surpass three billion metric tons, further intensifying the upward trend in temperatures and sea levels. To mitigate the adverse effects of vehicle-related CO2 emissions, one solution is for manufacturers to produce low or zero-emission vehicles. This initiative has been underway for years, as exemplified by Toyota's introduction of the world's first mass-produced hybrid vehicle in 1997. However, additional measures are needed to effectively combat climate change. This realization underscores the importance of developing innovative strategies that raise public awareness about the impact of vehicle-related CO2 emissions and promote the adoption of sustainable practices.
 
-## Overview of the Data
+## Research Question and Data Overview
 The primary research question that guided this analysis aimed to identify the most influential predictor or combination of predictors for the levels of CO2 emissions emitted by vehicles. To address this question, a comprehensive data set was obtained from the official open data website of the Canadian government. The data set encompasses information on 7,385 vehicles manufactured across Asia, North America, and Europe over a span of seven years. In its original form, the data set includes nine variables, with six being categorical and the remaining three being numeric. Additional variables were created by applying transformations to existing variables as well as implementing feature engineering techniques.
 
 ## Methodology
