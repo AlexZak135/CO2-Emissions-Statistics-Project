@@ -278,14 +278,11 @@ lm1.summary()
 ### Logistic Regression 
 
 # Take the following steps:
-  # 1. Add a constant
-  # 2. Create a scatter plot
-  # 3. Fit the model
-  # 4. Use custom function to get VIFs
-  # 5. Generate the output of the model
+  # 1. Create a scatter plot
+  # 2. Fit the model
+  # 3. Use custom function to get VIFs
+  # 4. Generate the output of the model
 
-df2 = sm.add_constant(df2)
- 
 sns.regplot(data = df2, x = "engine_size", y = "co2_emissions_bin", 
             logistic = True, ci = None,
             line_kws = {"color": "black"}, scatter_kws = {"color": "#9ED1C2"})
@@ -296,16 +293,14 @@ plt.ylabel("Binary CO2 Emissions", fontsize = 11)
 sns.despine(left = True, right = True)
 plt.show()
 
-glm1 = sm.Logit.from_formula("co2_emissions_bin ~ const + consumption + \
-                              engine_size + europe + north_america + diesel + \
-                              ethanol + regular + automatic + \
-                              automatic_with_select_shift + automated_manual + \
-                              continuously_variable", 
+glm1 = sm.Logit.from_formula("co2_emissions_bin ~ consumption + engine_size + \
+                              europe + north_america + diesel + ethanol + \
+                              regular + automatic + automatic_with_select_shift + \
+                              automated_manual + continuously_variable", 
                               data = df2).fit()
-                         
+                      
 vifs2 = vif_output(df2 
-                   .drop(columns = ["const", "cylinders", 
-                                    "europe", "north_america", 
+                   .drop(columns = ["cylinders", "europe", "north_america", 
                                     "co2_emissions_bin", "co2_emissions",
                                     "engine_size_squared"])) 
 
